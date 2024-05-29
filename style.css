@@ -474,7 +474,7 @@ body.showCart .container{
         height: 100px;
         padding: 0 5%;
         position: absolute;
-        width: 70%;
+        width: 56%;
         z-index: 50;
     }
     header h1 {
@@ -591,8 +591,7 @@ body.showCart .container{
     .listProduct{
         grid-template-columns: 1fr;
         padding-top: 120px;
-        width: 300px;
-        padding-left: 25px;
+        width: 100%;
     }
     
     .listProduct .item{
@@ -715,7 +714,7 @@ body.showCart .container{
     #contact {
         background-color: rgb(49, 49, 49);
         color: #ffffff; /* Change text color to white for better visibility */
-        height: 230px;
+        height: 270px;
         width: 100%;
         text-align: center;
     }
@@ -773,41 +772,14 @@ body.showCart .container{
         text-align: center;
         background-color: rgb(49, 49, 49);
     }
+  
     .oi{
-        display: flex;
-        flex-direction: row;
-        height: 32px;
-        width: 105px;
-        justify-content: space-between;
-        background-color: rgb(49, 49, 49);;
-        padding-right: 285px;
-    }
-    
-    .oi a{
-        display: flex;
-        width: 30px;
-        height: 30px;
-        background: transparent;
-        border: 1px solid white;
-        font-size: 17px;
-        border-radius: 50%;
-        color: lightblue;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(to top, rgb(154, 217, 238) 50%, black 50%);
-        background-size: 100% 200%;
-        transition: all .7s;
-    }
-    .oi a:hover{
-        background-position: left bottom;
-        color: black;
-        border: none;
-        box-shadow: 0 0 40px rgb(126, 165, 255);
+        display: none;
     }
 
     .heading{
-        padding-left: 130px;
         font-size: 1.5rem;
+        text-align: center;
     }
  
     
