@@ -45,8 +45,6 @@ header nav:hover > a:not(:hover) {
     background: none;
 }
 
-
-
 #home {
     display: flex;
     height: 55dvh;
@@ -147,14 +145,46 @@ header{
     letter-spacing: 7px;
     font-size: small;
 }
-.listProduct .item button{
+
+/* Base button style for product buttons */
+.listProduct .item button {
+    position: relative;
+    overflow: hidden; /* Ensures ripple effect stays contained */
     background-color: #353432;
     color: #eee;
     border: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border-radius: 20px;
+    padding: 8px 8px;
+    margin-top: 8px;
+    border-radius: 18px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+/* Click Effect: Slight scale-up and glow */
+.listProduct .item button:active {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    pointer-events: none;
+}
+
+/* Ripple Animation */
+@keyframes ripple-effect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 
@@ -304,7 +334,7 @@ body.showCart .container{
 
 #send:hover{
     cursor: pointer;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(255,255, 255);
     font-weight: bold;
 }
 .heading{
@@ -316,10 +346,8 @@ body.showCart .container{
     display: flex;
     flex-direction: row;
     height: 32px;
-    width: 105px;
-    justify-content: space-between;
+    width: 100hv;
     background-color: rgb(49, 49, 49);;
-    padding-right: 1414px;
 }
 
 .oi a{
@@ -614,14 +642,46 @@ body.showCart .container{
         letter-spacing: 6px;
         font-size: small;
     }
-    .listProduct .item button{
+    /* Button styling */
+    /* Base button style for product buttons */
+    .listProduct .item button {
+        position: relative;
+        overflow: hidden; /* Ensures ripple effect stays contained */
         background-color: #353432;
         color: #eee;
         border: none;
-        padding: 8px 12px; /* Adjust padding for better touch interaction */
+        padding: 10px 15px;
         margin-top: 8px;
         border-radius: 15px;
         cursor: pointer;
+        font-size: 1rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    }
+    
+    /* Click Effect: Slight scale-up and glow */
+    .listProduct .item button:active {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Ripple Effect */
+    .ripple {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple-effect 0.6s linear;
+        pointer-events: none;
+    }
+    
+    /* Ripple Animation */
+    @keyframes ripple-effect {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
     }
     
     

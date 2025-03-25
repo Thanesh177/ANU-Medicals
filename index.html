@@ -1,132 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style2.css" />
+  <!-- No need to include Firebase scripts here as we're using module imports -->
 </head>
-<body class="">
-    <header>
-        <h2 src="plus.png"></h2>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#container">Products</a>
-            <a href="#">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<body>
 
-    <section id="home">
-        <img src="mount2.png" class="mount2">
-        <img src="mount1.png" class="mount1">
-        <img src="bush2.png" class="bush2">
-
-        <h1 class="title">ANU MEDICALS</h1>
-
-        <img src="bush1.png" class="bush1">
-        <img src="leaf2.png" class="leaf2">
-        <img src="leaf1.png" class="leaf1">
-    </section>
-
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search...">
-        <button type="button" id="search-button">Search</button>
-    </div>
-    
-    <div id="container">
-        <header>
-            <div class="title">PRODUCT LIST</div>
-            <div class="icon-cart">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
-                </svg>
-                <span>0</span>
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+        <form id="signup-form">
+            <h1>Create Account</h1>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google"></i></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-        </header>
-        <div class="listProduct">
+            <span>or use your email for registeration</span>
+            <input type="text" name="username" placeholder="Name">
+            <input type="email" id="signup-email"  name="email" placeholder="Email">
+            <input type="password" id="signup-password" name="pwd" placeholder="Password">
+            <button type="submit">Sign Up</button>
+          </form>
 
+    </div>
+    <div class="form-container sign-in">
+        <form id="login-form">
+            <h1>Sign In</h1>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email password</span>
+            <input type="email"   id="login-email"  name="email" placeholder="Email">
+            <input type="password"   id="login-password"  name="pwd" placeholder="Password">
+            <a href="#">Forget Your Password?</a>
+            <button type="submit">Login</button>
+          </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome Back!</h1>
+                <p>Enter your personal details to use all of site features</p>
+                <button class="hidden" id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <button class="hidden" id="register">Sign Up</button>
+            </div>
         </div>
     </div>
-    <div class="cartTab">
-        <h1>Shopping Cart</h1>
-        <div class="listCart">
-            
-        </div>
-        <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="checkOut">CHECK OUT</button>
-        </div>
-    </div>
-    <br>
-    <br>
-    <h1 class="heading"style="color: black"> CONTACT</h1>
-    <section id="contact">
-        <div>
-            <form action="https://api.web3forms.com/submit" method="POST" class="form">
-                <input type="hidden" name="access_key" value="9450f40f-ce8f-4859-b679-a1b64bc4f27f">
-                <input type="text" name="name" class="input" placeholder="enter name">
-                <input type="email" name="email" class="input" placeholder="enter your email">
-                <textarea name="msg" id="msg" cols="30" role="30" placeholder="enter your msg"></textarea>
-                <input type="submit" value="SEND" id="send">
-            </form> 
-        </div>
-
-        <div class="mia">
-            192, Pwd Office St, Chetti Kulam, Chidambara Nagar, Chettikulam Junction, Nagercoi
-        </div>
-        <br>
-
-    </section>
-
-        <div class="oi">
-            <a  href="https://www.facebook.com/profile.php?id=100009152678676" <i class='bx bxl-facebook'></i></a>
-            <a href="https://www.linkedin.com/in/ntthanesh/>"<i class='bx bxl-linkedin'></i></a>
-            <a href="https://www.instagram.com/thaneshnt/>"<i class='bx bxl-instagram' ></i></a>
-        </div>
-    
-    <div id="checkoutModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Checkout</h2>
-        <div id="cartDetails">
-
-        </div> <!-- Container for cart details -->
-        <form id="checkoutForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required><br>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br>
-            <button type="submit">CONFIRM</button>
-        </form>
-    </div>
-    <script>
-        // Get the modal
-        var modal = document.querySelector('.modal-content');
-    
-        // Get the <span> element that closes the modal
-        var span = document.querySelector('.close');
-    
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.display = "none";
-        }
-    
-        // Optionally, you can add a function to open the modal
-        function openModal() {
-            modal.style.display = "block";
-        }
-    
-        // Example: open the modal when the page loads
-        window.onload = openModal;
-    </script>
 </div>
 
-    <script src="app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
 
+  <script type="module">
+    // Import the functions needed from the Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
+    import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBq7sDGcjYQ7lpLmry2xrlbaJmLYXt1BFM",
+      authDomain: "medicine-online-fa9fe.firebaseapp.com",
+      projectId: "medicine-online-fa9fe",
+      storageBucket: "medicine-online-fa9fe.firebasestorage.app",
+      messagingSenderId: "228368927013",
+      appId: "1:228368927013:web:898a811d98d0b6f41132cc",
+      measurementId: "G-RJ40DK2GRK"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    // Sign up function
+    document.getElementById("signup-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("signup-email").value;
+      const password = document.getElementById("signup-password").value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Sign Up Successful!");
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    });
+
+    // Login function
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("login-email").value;
+      const password = document.getElementById("login-password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          window.location.href = "main.html";
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    });
+  </script>
+
+    <script>
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+    
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+    });
+    
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+    });
+    </script>
 </body>
 </html>
