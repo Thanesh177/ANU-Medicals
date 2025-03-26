@@ -1,0 +1,6 @@
+express
+cors
+nodemailer
+dotenv
+firebase-admin
+body-parser
