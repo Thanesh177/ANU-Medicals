@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="">
+
+    <header>
+        <h2 src="plus.png"></h2>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#container">Products</a>
+            <a href="#">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#" id="logout">Log Out</a>
+
+        </nav>
+    </header>
+
+    <section id="home">
+        <img src="assets/mount2.png" class="mount2">
+        <img src="assets/mount1.png" class="mount1">
+        <img src="assets/bush2.png" class="bush2">
+
+        <h1 class="title">ANU MEDICALS</h1>
+
+        <img src="assets/bush1.png" class="bush1">
+        <img src="assets/leaf2.png" class="leaf2">
+        <img src="assets/leaf1.png" class="leaf1">
+    </section>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button type="button" id="search-button">Search</button>
+    </div>
+    
+    <div id="container">
+        <header>
+            <div class="title">PRODUCTS</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+        <div class="listProduct">
+            <!-- Products will be loaded here -->
+        </div>
+    </div>
+    
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <!-- Cart items will be listed here -->
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">CHECK OUT</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h1 class="heading" style="color: black"> CONTACT</h1>
+    <section id="contact">
+        <div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="form">
+                <input type="hidden" name="access_key" value="9450f40f-ce8f-4859-b679-a1b64bc4f27f">
+                <input type="text" name="name" class="input" placeholder="enter name">
+                <input type="email" name="email" class="input" placeholder="enter your email">
+                <textarea name="msg" id="msg" cols="30" role="30" placeholder="enter your msg"></textarea>
+                <input type="submit" value="SEND" id="send">
+            </form> 
+        </div>
+
+        <div class="mia">
+            192, Pwd Office St, Chetti Kulam, Chidambara Nagar, Chettikulam Junction, Nagercoi
+        </div>
+        <br>
+    </section>
+
+    <div class="oi">
+        <a href="https://www.facebook.com/profile.php?id=100009152678676"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.linkedin.com/in/ntthanesh/"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/thaneshnt/"><i class='bx bxl-instagram'></i></a>
+    </div>
+    
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <button class="close">x</button>
+            <h2>Checkout</h2>
+            <div id="cartDetails">
+                <!-- Cart details will appear here -->
+            </div>
+            <form id="checkoutForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br>
+                <button type="submit">CONFIRM</button>
+            </form>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.querySelector('.modal-content');
+        
+            // Get the <span> element that closes the modal
+            var span = document.querySelector('.close');
+        
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        
+            // Optionally, you can add a function to open the modal
+            function openModal() {
+                modal.style.display = "block";
+            }
+        
+            // Example: open the modal when the page loads
+            window.onload = openModal;
+        </script>
+
+        <script>
+            var button = document.querySelector('.listProduct.item button');
+            button.addEventListener('click', function() {
+                openModal();
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const buttons = document.querySelectorAll('.listProduct .item button');
+                buttons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        // Play full animation using the Web Animations API
+                        button.animate([
+                            { transform: 'scale(1)', boxShadow: '0 0 0 rgba(255,255,255,0)' },
+                            { transform: 'scale(1.05)', boxShadow: '0 0 10px rgba(255,255,255,0.4)' },
+                            { transform: 'scale(0.98)', boxShadow: '0 0 5px rgba(255,255,255,0.3)' },
+                            { transform: 'scale(1)', boxShadow: '0 0 0 rgba(255,255,255,0)' }
+                        ], {
+                            duration: 600,
+                            easing: 'ease-out'
+                        });
+                    });
+                });
+            });
+        </script>
+        <script>
+            document.querySelectorAll(".listProduct .item button").forEach(button => {
+                button.addEventListener("click", function(event) {
+                    // Remove any existing ripples
+                    const existingRipple = this.querySelector(".ripple");
+                    if (existingRipple) {
+                        existingRipple.remove();
+                    }
+                    // Create new ripple
+                    const ripple = document.createElement("span");
+                    ripple.classList.add("ripple");
+                    // Position ripple based on click location
+                    const rect = this.getBoundingClientRect();
+                    const x = event.clientX - rect.left;
+                    const y = event.clientY - rect.top;
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    // Append ripple to button
+                    this.appendChild(ripple);
+                    // Remove ripple after animation completes
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        </script>
+    </div>
+
+    <!-- Only use the compat version -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBq7sDGcjYQ7lpLmry2xrlbaJmLYXt1BFM",
+        authDomain: "medicine-online-fa9fe.firebaseapp.com",
+        projectId: "medicine-online-fa9fe",
+        storageBucket: "medicine-online-fa9fe.firebasestorage.app",
+        messagingSenderId: "228368927013",
+        appId: "1:228368927013:web:898a811d98d0b6f41132cc",
+        measurementId: "G-RJ40DK2GRK"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+
+    <!-- Logout script -->
+    <script>
+        document.getElementById("logout").addEventListener("click", function(e) {
+            e.preventDefault();
+            firebase.auth().signOut()
+            .then(() => {
+                window.location.href = "index.html";
+            })
+            .catch((error) => {
+                console.error("Sign Out Error:", error);
+            });
+        });
+    </script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
