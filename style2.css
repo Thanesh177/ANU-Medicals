@@ -200,3 +200,46 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+
+
+.switch-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: none; /* hidden by default, only show in mobile */
+}
+
+@media (max-width: 768px) {
+    .toggle-container {
+        display: none; /* hide purple toggle panel */
+    }
+
+    #switch-to-signup{
+        display: block; /* show mobile switch buttons */
+        background-color: transparent;
+        color: #000;
+        text-decoration: none; 
+        transition: all 0.3s ease-in-out;
+       }
+
+    #switch-to-login {
+        display: block; /* show mobile switch buttons */
+        background-color: transparent;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .sign-in, .sign-up {
+        width: 100%;
+        left: 0;
+    }
+
+    .container.active .sign-in,
+    .container.active .sign-up {
+        transform: translateX(0);
+    }
+}

@@ -9,11 +9,10 @@ html{
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
     height: 100px;
-    padding: 0 5%;
     position: absolute;
-    width: 70%;
+    width: 100%;
     z-index: 50;
 }
 header h1 {
@@ -21,14 +20,20 @@ header h1 {
     color: white;
 }
 header nav {
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 30px;
-    padding-bottom: 50px;
-    padding-right: 53px;
+    top: 0;
+    left: 0;
+
+
 }
 header nav a {
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 99px;
@@ -126,21 +131,27 @@ header{
 }
 
 .listProduct{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding-top: 110px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 150px 0px;
 }
 
 .listProduct .item{
     background-color: #EEEEE6;
     padding: 20px;
+    height: 90%;
     border-radius: 20px;
+
 }
 .listProduct .item h2{
+    display: none;
     font-weight: 500;
     font-size: large;
+    margin: 5px 0; /* Add margin for better spacing */
 }
+
 .listProduct .item .price{
     letter-spacing: 7px;
     font-size: small;
@@ -222,29 +233,34 @@ body.showCart .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     cursor: pointer;
-
 }
+
 .cartTab button{
+    display: flex;
     background-color: #0eb5e8;
     border: none;
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
     font-size: 1.3rem;
+
 }
 .cartTab .close{
     background-color: #eee;
     font-size: 1.3rem;
+    color: #353432;
 }
 
 
 .listCart .item img{
     width: 100%;
+    padding: 1.2rem;
 }
 .listCart .item{
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
     gap: 10px;
+    margin-bottom: 1rem;
     text-align: center;
     align-items: center;
 }
@@ -271,6 +287,7 @@ body.showCart .container{
 .listCart::-webkit-scrollbar{
     width: 0;
 }
+
 
 .mia{
     color: rgb(255, 255, 255);
@@ -376,22 +393,24 @@ body.showCart .container{
 .search-container {
     display: flex;
     align-items: center;
-    width: 350px; /* Adjust width as needed */
+    justify-content: center;
+    width: 100%; /* Adjust width as needed */
     margin: 0 auto; /* Center the search bar horizontally */
     padding-top: 50px;
 }
 
 #search-input {
-    flex: 1; /* Take remaining space */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 14px 14px 14px 14px; /* Rounded corners on the left */
-    font-size: 14px;
+    padding: 10px;
+    width: 26%; /* Take remaining space */
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Rounded corners on the left */
+    font-size: 20px;
 }
 
 #search-button {
-    padding: 8px 12px;
-    border: none;
+    display: none;
+    padding: 14px;
+    border-radius: 20px;
     background-color: #007bff; /* Blue color, adjust as needed */
     color: #fff;
     border-radius: 14px 14px 14px 14px; /* Rounded corners on the right */
@@ -499,35 +518,51 @@ body.showCart .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 100px;
-        padding: 0 5%;
-        position: absolute;
-        width: 56%;
+        position: sticky;
         z-index: 50;
+        height: 28px;
+        background-color: transparent;
     }
     header h1 {
         font-size: 10px;
         color: rgb(37, 26, 26);
     }
     header nav {
+        position: fixed;       /* Stays at top */
+        top: 2%;
+        left: 0;
         display: flex;
         gap: 1px;
-        padding-bottom: 50px;
+        padding: 0 3px;
+        width: 100vw;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  background-color: rgba(255, 255, 255, 0.3); /* semi-transparent */
+  backdrop-filter: blur(10px);                /* blur effect */
+  -webkit-backdrop-filter: blur(10px); 
     }
+
     header nav a {
         text-decoration: none;
+
         font-size: 16px;
         font-weight: 600;
-        padding: 8px 16px;
-        border-radius: 99px;
-        transition: 0.3s;
-        color: white;
+        padding:  13px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
     }
     header nav a.active {
-        background: #5247B9;
+        background: #97cdf0;
     }
     header nav a:hover {
-        background: #5247B9;
+        background: #97cdf0;
     }
     header nav:hover > a:not(:hover) {
         background: none;
@@ -732,27 +767,28 @@ body.showCart .container{
         font-size: 1.3rem;
     }
     .cartTab .close{
-        background-color: #eee;
+        background-color: #fffefe;
         font-size: 1.3rem;
+        color: #353432;
     }
 
     .listCart .item img{
-        width: 60px;
+        width: 70px;
         height: auto;
     }
     .listCart .item{
         display: grid;
-        grid-template-columns: 50px 1fr; /* Simplified grid layout for mobile */
-        gap: 10px;
+        grid-template-columns: 150px 1fr; /* Simplified grid layout for mobile */
+        gap: 5px;
+        padding: 20px;
         text-align: center;
         align-items: center;
     }
     .listCart .quantity span{
         display: inline-block;
         width: 20px; /* Adjust size for mobile */
-        height: 20px; /* Adjust size for mobile */
-        line-height: 20px; /* Center text vertically */
-        font-size: 14px; /
+        height: 20px; /* Adjust size for mobile */     
+           font-size: 16px; 
     }
     .listCart .quantity span:nth-child(2){
         background-color: transparent;
@@ -764,9 +800,14 @@ body.showCart .container{
     }
     .listCart{
         overflow: auto;
+        
     }
     .listCart::-webkit-scrollbar{
         width: 0;
+    }
+    .clear-product{
+        width: 100px;
+        margin: 0 auto;
     }
 
 
@@ -899,6 +940,7 @@ body.showCart .container{
         position: fixed;
         top: 40%;
         left:50%;
+        padding: 1rem;
         transform: translate(-50%, -50%);
         background-color: white;
         border: 1px solid #888;
@@ -934,22 +976,31 @@ body.showCart .container{
         display: flex;
         margin-top: 5px;
         font-weight: bold;
+        padding: 0.2rem;
         
     }
     #checkoutForm input {
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 15px;
+        padding: 0.4rem;
+
     }
     #checkoutForm button {
         background-color: #4CAF50;
         color: white;
         border-radius: 4px;
         cursor: pointer;
-        padding: 4px;
+        padding: 8px;
         font-size: 17px;
     }
     #checkoutForm button:hover {
         background-color: #45a049;
+    }
+    #gpay-container{
+        display: flex;
+        justify-content: left;
+        padding: 0.4rem 0;
+        height: 100%;
     }
 }
