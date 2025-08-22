@@ -7,8 +7,6 @@ let closeCart = document.querySelector('.close');
 let products = [];
 let cart = [];
 
-
-
 const updateCartInDatabase = () => {
   const user = firebase.auth().currentUser;
   if (user) {
@@ -535,18 +533,6 @@ function onGooglePaymentButtonClicked() {
 }
 
 
-const container = document.getElementById("container");
 
-const registerButton = document.getElementById("register");
-const loginButton = document.getElementById("login");
-
-const switchToSignup = document.getElementById("switch-to-signup");
-const switchToLogin = document.getElementById("switch-to-login");
-
-
-
-// Mobile toggle
-switchToSignup.addEventListener("click", () => container.classList.add("active"));
-switchToLogin.addEventListener("click", () => container.classList.remove("active"));
 
 initApp();

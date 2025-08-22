@@ -165,6 +165,23 @@
     });
   </script>
 
+<script>
+  
+const containers = document.getElementById("container");
+
+const registerButton = document.getElementById("register");
+const loginButton = document.getElementById("login");
+
+const switchToSignup = document.getElementById("switch-to-signup");
+const switchToLogin = document.getElementById("switch-to-login");
+
+
+
+// Mobile toggle
+switchToSignup.addEventListener("click", () => containers.classList.add("active"));
+switchToLogin.addEventListener("click", () => containers.classList.remove("active"));
+
+</script>
     
 </body>
 </html>
