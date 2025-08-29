@@ -3,185 +3,410 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login / Sign Up</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="style2.css" />
-  <!-- No need to include Firebase scripts here as we're using module imports -->
+  <title>The D Cruz Digital</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="container" id="container">
-    <div class="form-container sign-up">
-        <form id="signup-form">
-            <h1>Create Account</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email for registration</span>
-            <input type="text" name="username" placeholder="Name">
-            <input type="email" id="signup-email" name="email" placeholder="Email">
-            <input type="password" id="signup-password" name="pwd" placeholder="Password">
-            <button type="submit">Sign Up</button>
-            <!-- Mobile switch button -->
-            <button type="button" class="switch-btn" id="switch-to-login">Already have an account?</button>
-        </form>
+<div class="navbar">
+  <div class="animated-text">
+    <div class="line">ABI D CRUZ</div>
+    <div class="line">Photographer</div>
+    <div class="line">Designer</div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="image.html">Gallery</a>
+
+    <!-- Dropdown-New (clickable) -->
+    <div class="dropdown-new" id="photographyDropdown">
+      <button class="dropbtn-new" id="photographyButton">
+        Genres
+        <span class="arrow-new"></span>
+      </button>
+      <div class="dropdown-content-new">
+        <a href="culinary.html">Culinary</a>
+        <a href="model.html">Model</a>
+        <a href="interior.html">Interior</a>
+        <!-- add more submenu items here -->
+      </div>
     </div>
 
-    <div class="form-container sign-in">
-        <form id="login-form">
-            <h1>Sign In</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email password</span>
-            <input type="email" id="login-email" name="email" placeholder="Email">
-            <input type="password" id="login-password" name="pwd" placeholder="Password">
-            <a href="#">Forget Your Password?</a>
-            <button type="submit">Login</button>
-            <!-- Mobile switch button -->
-            <button type="button" class="switch-btn" id="switch-to-signup">Create an account</button>
-        </form>
-    </div>
+    <button class="btn" onclick="location.href='#contact'">
+      CONTACT
+    </button>  
+  </nav>
+</div>
 
-    <!-- Toggle panel (for desktop only) -->
-    <div class="toggle-container">
-        <div class="toggle">
-            <div class="toggle-panel toggle-left">
-                <h1>Welcome Back!</h1>
-                <p>Enter your personal details to use all of site features</p>
-                <button class="hidden" id="login">Sign In</button>
+  <div class="container">
+  <div class="section" id="section1">
+    <div class="content">
+      <div class="containers">
+        <div class="slides">
+            <div class="items" style="background-image: url(images/96.jpeg);">
+                <div class="contents">
+
+                </div>
             </div>
-            <div class="toggle-panel toggle-right">
-                <h1>Hello, Friend!</h1>
-                <p>Register with your personal details to use all of site features</p>
-                <button class="hidden" id="register">Sign Up</button>
+            <div class="items" style="background-image: url(images/94.jpeg);">
+                <div class="contents">
+                    <div class="name">Fashion photography</div>
+                    <div class="des">Capturing stylish, editorial, trendy moments that define modern fashion.</div>
+                    <button onclick="window.location.href='model.html'">See More</button>                </div>
             </div>
+            <div class="items" style="background-image: url(images/93.jpeg);">
+                <div class="contents">
+                    <div class="name">Architectural photography.</div>
+                    <div class="des">Highlighting structural, innovative, modern, iconic, and majestic buildings through the lens.</div>
+                    <button onclick="window.location.href='interior.html'">See More</button>
+                </div>
+            </div>
+            <div class="items" style="background-image: url(images/100.jpeg);">
+                <div class="contents">
+                    <div class="name">Culinary photography.</div>
+                    <div class="des">Showcasing delicious, flavorful, and exquisite dishes that delight the senses.</div>
+                    <button onclick="window.location.href='culinary.html'">See More</button>              
+                </div>
+            </div>
+            <div class="items" style="background-image: url(images/102.jpeg);">
+                <div class="contents">
+                    <div class="name">Interior photography.</div>
+                    <div class="des"> Designing cozy, elegant, aesthetic, and inviting spaces that feel like home.</div>
+                    <button onclick="window.location.href='interior.html'">See More</button>              
+                </div>
+            </div>
+            <div class="items" style="background-image: url(images/90.jpeg);">
+                <div class="contents">
+
+                </div>
+            </div>
+
         </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    </div>
+  </div>
+
+<div class="section" id="section2">
+<img class="about-img" src="pic.jpg" alt="Image 5"
+     style="border-radius: 15px; box-shadow: 0 4px 16px rgb(255, 255, 255);" />  <div class="content">
+    <div class="liver">
+      <p class="about-me">one shot at a time.</p>
+      <p class="about-me">You live the moments,”</p>
+      <p class="about-me"> we capture the memories.</p>
+      
+
+    </div>
+    <div class="down1">
+<p>
+  Turning fleeting seconds into lasting impressions.<br>
+  Capturing not what you see, but what you feel.<br>
+  Every photo tells a story, let's tell yours.<br>
+  From candid smiles to timeless portraits.<br>
+  More than photography, it's storytelling.<br>
+</p>
+    </p>
+    </div>
+    <p class="down">Let's dive in!</p>
+
+  </div>
+</div>
+
+  <div class="section" id="section3">
+
+    <div class="content">
+    <div class="services-title-wrapper">
+      <h2 class="services-title">Services</h2>
+    </div>
+      <div class="drop">
+
+      <div class="wrapper">
+
+        <div class="cards-container">
+          <input type="radio" name="sliders" id="c1" checked>
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="description">
+                <h4>Cullinary</h4>
+                <p>Culinary photography is more than capturing food s about more than just food—it's about emotion, connection, and intimacy</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="sliders" id="c2">
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="description">
+                <h4>Modeling</h4>
+                <p>nviting us to see beyond the surface and feel the person’s presence in a timeless frame.</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="sliders" id="c3">
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="description">
+                <h4>Interior</h4>
+                <p>Each image tells the story of a space—how it feels to be there, how light flows through it</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="sliders" id="c4">
+          <label for="c4" class="card">
+            <div class="row">
+              <video class="card-video" autoplay muted loop playsinline>
+                <source src="/images/vid.mov" type="video/quicktime"  />
+                Your browser does not support the video tag.
+              </video>
+              <div class="description">
+                <h4>Videography</h4>
+                <p>Videography is the art of capturing motion and emotion, turning fleeting moments into lasting visual stories.</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="sliders" id="c5">
+          <label for="c5" class="card">
+            <div class="row">
+              <div class="description">
+                <h4>Events</h4>
+                <p>Capturing movements in photographs is about more than just frames—it’s about emotion, connection, and intimacy. </p>
+              </div>
+            </div>
+          </label>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="section" id="section4">
+    <div class="content">
+    <section id="nextSection">
+        <div class="container">
+            <!-- TEXT ON LEFT -->
+            <div class="text-container">
+                <div class="text-item">Capturing a romantic dinner in photographs is about more than just food—it’s about emotion, connection, and intimacy. From the soft flicker of candlelight to the gentle glances exchanged across the table, each detail tells a story of love and shared moments. The glow of warm tones, the elegance of plating, and the ambiance of the setting come together to freeze a fleeting feeling in time. It’s not just a meal—it’s a memory, a quiet celebration of togetherness, beautifully preserved through the lens.<br><br>
+                    </div>
+                <div class="text-item">Food photography is an art of storytelling where flavors, textures, and aromas are captured through light and composition. Every dish tells a story—from the rustic charm of homemade bread to the vibrant burst of color in a summer salad. Through thoughtful angles, natural lighting, and careful styling, food photography doesn’t just showcase what we eat—it evokes emotion, nostalgia, and hunger. It’s a celebration of culture, creativity, and the universal joy that food brings to our lives.
+<br><br>
+                    </div>
+                <div class="text-item">Capturing a breathtaking view is about freezing a moment where nature’s grandeur and tranquility converge. It’s the golden hour sunlight painting the sky with hues of pink, orange, and lavender, casting a soft glow over rolling hills, shimmering lakes, or towering cityscapes. Through the lens, every detail—from the gentle sway of trees to the vast expanse of the horizon—tells a story of peace, wonder, and endless possibilities. A stunning view photograph invites the viewer to step into that serene scene, feel the breeze, and experience the awe of the world’s natural beauty in a single frame.<br><br>
+                    </div>
+                <div class="text-item">Capturing a person is more than just taking a photo; it’s about revealing the essence of their spirit, emotions, and story. Through the lens, every glance, smile, and subtle expression becomes a window into their unique personality and mood. Whether in a candid moment or a carefully composed portrait, the photograph freezes a fleeting instant, preserving the raw beauty and depth of human connection. It’s a silent conversation between the subject and the viewer, inviting us to see beyond the surface and feel the person’s presence in a timeless frame.
+<br><br>
+                    </div>
+                <div class="text-item">Capturing buildings through photography is an art of showcasing the marriage between architecture and storytelling. Each structure holds a unique character — from the grandeur of historical monuments to the sleek lines of modern skyscrapers. A well-framed shot reveals not only the design and details but also the atmosphere surrounding the building — the play of light and shadow, the textures of materials, and the cultural context it inhabits. Through the lens, buildings transform from static constructions into living symbols of human creativity, history, and progress.
+                </div>
+                <div class="text-item">Photographing pastries is an art of showcasing delicate craftsmanship and irresistible indulgence. Each flaky layer, glossy glaze, and sprinkle of powdered sugar tells a story of passion and precision in baking. Through the lens, the golden crusts and vibrant fillings come alive, tempting the senses and inviting viewers to savor every detail. It’s about capturing the warmth of fresh-baked goodness and the joyful anticipation that comes with every bite — a sweet celebration of flavor, texture, and beauty.
+                </div>
+            </div>
+    
+            <!-- IMAGE ON RIGHT -->
+            <div class="image-container">
+                <div class="pic"><img src="/images/i.png" alt="Image 1"></div>
+                <div class="pic"><img src="/images/o.png" alt="Image 2"></div>
+                <div class="pic"><img src="/images/rrr.png" alt="Image 3"></div>
+                <div class="pic"><img src="/images/uu.png" alt="Image 4"></div>
+                <div class="pic"><img src="/images/vv.png" alt="Image 5"></div>
+                <div class="pic"><img src="/images/u.png" alt="Image 6"></div>
+            </div>
+                    <p class="verti">MAGICAL MOVEMENTS</p>
+
+        </div>
+        
+        
+        <div class="button-group">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+
+        <div class="dot-container" id="dotContainer"></div>
+
+    </section>
     </div>
 </div>
 
+<div class="section" id="section5">
+  <div class="content">
+    <section id="slider-section">
+      <div class="slider-container">
+        <div class="track" id="track">
+          <!-- Original Images -->
+          <img src="/images/aa.png" />
+          <img src="/images/91.jpeg" alt="Image 1" />
+          <img src="/images/11.jpg" alt="Image 1" />
+          <img src="/images/100.jpeg" alt="Image 1" />
+          <img src="/images/97.jpeg" alt="Image 1" />
+          <img src="/images/96.jpeg" alt="Image 1" />
+          <img src="/images/89.jpeg" alt="Image 1" />
+          <img src="/images/87.jpeg" alt="Image 1" />
+          <img src="/images/79.jpeg" alt="Image 1" />
 
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+        </div>
+      </div>
+    <div class="dot-nav"></div>
 
-  <script type="module">
-    // Import the functions needed from the Firebase SDKs
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
-    import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyBq7sDGcjYQ7lpLmry2xrlbaJmLYXt1BFM",
-      authDomain: "medicine-online-fa9fe.firebaseapp.com",
-      projectId: "medicine-online-fa9fe",
-      storageBucket: "medicine-online-fa9fe.firebasestorage.app",
-      messagingSenderId: "228368927013",
-      appId: "1:228368927013:web:898a811d98d0b6f41132cc",
-      measurementId: "G-RJ40DK2GRK"
-    };
+    </section>
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const auth = getAuth(app);
 
-    // Sign up function
-    document.getElementById("signup-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const email = document.getElementById("signup-email").value;
-      const password = document.getElementById("signup-password").value;
 
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("Sign Up Successful!");
-        })
-        .catch((error) => {
-          alert(error.message);
-        });
-    });
 
-    // Login function
-    document.getElementById("login-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const email = document.getElementById("login-email").value;
-      const password = document.getElementById("login-password").value;
 
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          window.location.href = "main.html";
-        })
-        .catch((error) => {
-          alert(error.message);
-        });
-    });
-  </script>
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+<img class="image" src="/images/c.png" draggable="false"/>
+<img class="image" src="/images/v.png" draggable="false"/>
+<img class="image" src="/images/m.png" draggable="false"/>
+<img class="image" src="/images/n.png" draggable="false"/>
+<img class="image" src="/images/bb.png" draggable="false"/>
+<img class="image" src="/images/xx.png" draggable="false"/>
+<img class="image" src="/images/zz.png" draggable="false"/>
+<img class="image" src="/images/ll.png" draggable="false"/>
+<img class="image" src="/images/kk.png" draggable="false"/>
+<img class="image" src="/images/jj.png" draggable="false"/>
+<img class="image" src="/images/hh.png" draggable="false"/>
+<img class="image" src="/images/gg.png" draggable="false"/>
+<img class="image" src="/images/ff.png" draggable="false"/>
+<img class="image" src="/images/dd.png" draggable="false"/>
+<img class="image" src="/images/ss.png" draggable="false"/>
+<img class="image" src="/images/aa.png" draggable="false"/>
+<img class="image" src="/images/q.png" draggable="false"/>
+<img class="image" src="/images/w.png" draggable="false"/>
+<img class="image" src="/images/e.png" draggable="false"/>
+<img class="image" src="/images/t.png" draggable="false"/>
+<img class="image" src="/images/r.png" draggable="false"/>
+<img class="image" src="/images/y.png" draggable="false"/>
+<img class="image" src="/images/u.png" draggable="false"/>
+<img class="image" src="/images/i.png" draggable="false"/>
+<img class="image" src="/images/o.png" draggable="false"/>
+<img class="image" src="/images/p.png" draggable="false"/>
+<img class="image" src="/images/s.png" draggable="false"/>
+<img class="image" src="/images/d.png" draggable="false"/>
+<img class="image" src="/images/f.png" draggable="false"/>
+<img class="image" src="/images/g.png" draggable="false"/>
+<img class="image" src="/images/h.png" draggable="false"/>
+<img class="image" src="/images/j.png" draggable="false"/>
+<img class="image" src="/images/k.png" draggable="false"/>
+<img class="image" src="/images/l.png" draggable="false"/>
+<img class="image" src="/images/z.png" draggable="false"/>
 
-    <script>
-    const container = document.getElementById('container');
-    const registerBtn = document.getElementById('register');
-    const loginBtn = document.getElementById('login');
-    
-    registerBtn.addEventListener('click', () => {
-        container.classList.add("active");
-    });
-    
-    loginBtn.addEventListener('click', () => {
-        container.classList.remove("active");
-    });
-    </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById("container");
+        </div>
+  </div>
+</div>
 
-      // Desktop toggle
-      const registerButton = document.getElementById("register");
-      const loginButton = document.getElementById("login");
 
-      // Mobile toggle
-      const switchToSignup = document.getElementById("switch-to-signup");
-      const switchToLogin = document.getElementById("switch-to-login");
+<div class="section" id="contact">
+      <img src="/images/95.jpeg" alt="Image 5" />
+  <div class="content">
+    <br>
+    <h2>GET IN TOUCH! </h2>
+<p class="last">As you've probably gathered by now, we are all about connections and life experiences. We do get a buzz with the possibility of meeting new people and documenting their adventures. Tell us about your plans!</p>
+<br>
+    <form action="https://api.web3forms.com/submit" method="POST" class="form">
+      <input type="hidden" name="access_key" value="9450f40f-ce8f-4859-b679-a1b64bc4f27f">
+<p>NAME</p>
+      <input
+        type="text"
+        name="name"
+        class="input"
+        required
+      >
+<p>E-MAIL</p>
 
-      if (registerButton) {
-        registerButton.addEventListener("click", () => container.classList.add("active"));
-      }
-      if (loginButton) {
-        loginButton.addEventListener("click", () => container.classList.remove("active"));
-      }
-      if (switchToSignup) {
-        switchToSignup.addEventListener("click", () => container.classList.add("active"));
-      }
-      if (switchToLogin) {
-        switchToLogin.addEventListener("click", () => container.classList.remove("active"));
-      }
-    });
-  </script>
+      <input
+        type="email"
+        name="email"
+        class="input"
+        required
+      >
+<p>PLEASE TELL US A LITTLE ABOUT YOUR EVENT (Location, style, vibe or anything that is important to you)</p>
+
+      <textarea
+        name="msg"
+        id="msg"
+        cols="30"
+        rows="5"
+        required
+      ></textarea>
+
+      <input type="submit" value="SEND" id="send">
+    </form>
+
+    <div class="icon">
+      <a
+        href="https://www.facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class='bx bxl-facebook'></i>
+      </a>
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class='bx bxl-linkedin'></i>
+      </a>
+      <a
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class='bx bxl-instagram'></i>
+      </a>
+    </div>
+
+
+    <h3 class="footer">© 12/2, Joshua street, Nagercoil | abishekdevc@gmail.com | +91 9442433773</h3>
+  </div>
+</div>
+
+
+  <div class="scroll-indicator">
+    <div class="dot" data-index="0"></div>
+    <div class="dot" data-index="1"></div>
+    <div class="dot" data-index="2"></div>
+    <div class="dot" data-index="3"></div>
+    <div class="dot" data-index="4"></div>
+    <div class="dot" data-index="5"></div>
+  </div>
+
+<script src="action.js"></script>
 
 <script>
-  
-const containers = document.getElementById("container");
+  // Wait until the DOM is fully loaded:
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.getElementById('photographyDropdown');
+    const button = document.getElementById('photographyButton');
 
-const registerButton = document.getElementById("register");
-const loginButton = document.getElementById("login");
+    // 1. Toggle .open when you click the button
+    button.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent this click from bubbling up and immediately closing
+      dropdown.classList.toggle('open');
+    });
 
-const switchToSignup = document.getElementById("switch-to-signup");
-const switchToLogin = document.getElementById("switch-to-login");
-
-
-
-// Mobile toggle
-switchToSignup.addEventListener("click", () => containers.classList.add("active"));
-switchToLogin.addEventListener("click", () => containers.classList.remove("active"));
-
+    // 2. If you click anywhere outside the dropdown, close it
+    document.addEventListener('click', function(e) {
+      // If the click target is not inside dropdown, remove the 'open' class
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  });
 </script>
-    
+
 </body>
 </html>
